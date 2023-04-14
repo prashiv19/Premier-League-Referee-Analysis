@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Threads</title>
+</head>
+<body>
+    <h1>Threads</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Created At</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="thread : ${threads}">
+                <td th:text="${thread.title}"></td>
+                <td th:text="${thread.user.username}"></td>
+                <td th:text="${thread.createdAt}"></td>
+                <td th:text="${thread.comments.size()}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <form th:object="${newThread}" method="post">
+        <div>
+            <label>Title:</label>
+            <input type="text" th:field="*{title}" />
+        </div>
+        <div>
+            <label>Content:</label>
+            <textarea th:field="*{content}"></textarea>
+        </div>
+        <button type="submit">Create Thread</button>
+    </form>
+</body>
+</html>

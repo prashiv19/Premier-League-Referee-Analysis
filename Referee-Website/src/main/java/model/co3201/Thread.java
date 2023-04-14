@@ -86,7 +86,7 @@ public class Thread {
 		this.createdAt = createdAt;
 	}
 
-    // getters and setters omitted for brevity
+    // getters and setters 
     
     
 }

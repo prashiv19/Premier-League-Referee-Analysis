@@ -71,7 +71,7 @@ public class Comment {
 		this.createdAt = createdAt;
 	}
 
-    // getters and setters omitted for brevity
+    // getters and setters 
     
     
 }

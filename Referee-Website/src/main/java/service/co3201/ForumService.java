@@ -14,7 +14,7 @@ import model.co3201.User;
 
 @Service
 public class ForumService {
-
+//service class for forums
     private ThreadRepository threadRepository;
     private CommentRepository commentRepository;
     private UserRepository userRepository;

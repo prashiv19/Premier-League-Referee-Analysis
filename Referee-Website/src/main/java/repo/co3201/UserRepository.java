@@ -6,4 +6,4 @@ import model.co3201.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
-}
+}//finduser repo

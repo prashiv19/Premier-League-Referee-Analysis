@@ -6,3 +6,5 @@ import model.co3201.Comment;
 
 public interface CommentRepository extends JpaRepository<Comment, Long> {
 }
+
+//comment repo

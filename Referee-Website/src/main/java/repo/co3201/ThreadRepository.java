@@ -6,3 +6,4 @@ import model.co3201.Thread;
 public interface ThreadRepository extends JpaRepository<Thread, Long> {
 	
 }
+//threadrepo

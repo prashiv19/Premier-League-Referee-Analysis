@@ -21,7 +21,7 @@ public class ForumController {
         this.forumService = forumService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/thread")
     public String getAllThreads(Model model) {
         List<Thread> threads = forumService.getAllThreads();
         Thread newThread = new Thread();
@@ -30,7 +30,7 @@ public class ForumController {
         return "threads";
     }
     
-    @PostMapping("/")
+    @PostMapping("/thread")
     public String addThread(@ModelAttribute Thread thread, Principal principal) {
         forumService.addThread(thread, principal.getName());
         return "redirect:/";
